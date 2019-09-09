@@ -52,6 +52,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "159485357670-k81a55e45s73eg7kvpd27dnfoipie17m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.axon.pruebabilletera",
+            "certificate_hash": "670a159c12f26018b2e8d575144cb8017b9bc502"
+          }
+        },
+        {
           "client_id": "159485357670-6sibjao69nt8p0gui0inq2gnoi22v43t.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
