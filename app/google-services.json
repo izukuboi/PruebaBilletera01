@@ -1,0 +1,130 @@
+{
+  "project_info": {
+    "project_number": "159485357670",
+    "firebase_url": "https://pruebabilleteraf.firebaseio.com",
+    "project_id": "pruebabilleteraf",
+    "storage_bucket": "pruebabilleteraf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159485357670:android:ea9ec2f6547780252687a7",
+        "android_client_info": {
+          "package_name": "com.axon.android_kotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159485357670-e4konsprvmcbt5u3olrb844q5sd0gm1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.axon.android_kotlin",
+            "certificate_hash": "2bd33afeafeadb250864d73c2aedd35d4b27644a"
+          }
+        },
+        {
+          "client_id": "159485357670-qrjug66sn8jehv0qb0i7e5alobnd9oub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP8XuKQOmfIyMZvBo5ZJt8PYsO3f5-i8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159485357670-qrjug66sn8jehv0qb0i7e5alobnd9oub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159485357670:android:749687054abae6f42687a7",
+        "android_client_info": {
+          "package_name": "com.axon.pruebabilletera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159485357670-6sibjao69nt8p0gui0inq2gnoi22v43t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.axon.pruebabilletera",
+            "certificate_hash": "2bd33afeafeadb250864d73c2aedd35d4b27644a"
+          }
+        },
+        {
+          "client_id": "159485357670-qrjug66sn8jehv0qb0i7e5alobnd9oub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP8XuKQOmfIyMZvBo5ZJt8PYsO3f5-i8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159485357670-qrjug66sn8jehv0qb0i7e5alobnd9oub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159485357670:android:0658fc9efc67a83b2687a7",
+        "android_client_info": {
+          "package_name": "hm.app.angelw.com.billeterap_f"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "159485357670-dnen8hotor8te0m29iqikk1f572apibq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hm.app.angelw.com.billeterap_f",
+            "certificate_hash": "670a159c12f26018b2e8d575144cb8017b9bc502"
+          }
+        },
+        {
+          "client_id": "159485357670-2kd47r3p03766cvd0dnp5qdheme9lqc8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hm.app.angelw.com.billeterap_f",
+            "certificate_hash": "2bd33afeafeadb250864d73c2aedd35d4b27644a"
+          }
+        },
+        {
+          "client_id": "159485357670-qrjug66sn8jehv0qb0i7e5alobnd9oub.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP8XuKQOmfIyMZvBo5ZJt8PYsO3f5-i8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "159485357670-qrjug66sn8jehv0qb0i7e5alobnd9oub.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
