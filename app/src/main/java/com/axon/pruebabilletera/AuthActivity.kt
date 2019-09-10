@@ -66,13 +66,11 @@ class AuthActivity : AppCompatActivity() {
                 // now need to ask the user to enter the code and then construct a credential
                 // by combining the code with a verification ID.
                 Log.d(TAG, "onCodeSent:$verificationId")
-                val i = Intent(this@AuthActivity,TokenActivity::class.java)
+
                 // Save verification ID and resending token so we can use them later
                 mVerificationId = verificationId
                 mResendToken = token
-                i.putExtra("verificationId",mVerificationId)
-                i.putExtra("token",mResendToken)
-                startActivity(i)
+
             }
 
         }
