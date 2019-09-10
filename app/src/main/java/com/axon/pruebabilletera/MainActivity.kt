@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         }
         button3.setOnClickListener{
             val intent :Intent = Intent(this, AuthActivity::class.java)
+            intent.putExtra("prueba",prueba)
             startActivity(intent)
         }
 
