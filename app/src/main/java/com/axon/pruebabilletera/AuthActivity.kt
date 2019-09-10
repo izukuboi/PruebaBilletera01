@@ -16,6 +16,8 @@ import java.util.concurrent.TimeUnit
 class AuthActivity : AppCompatActivity() {
     lateinit var phoneId :EditText
     lateinit var btnauth :Button
+    lateinit var btncode :Button
+    lateinit var codeId :EditText
 
 
     private lateinit var mFirebaseAuth :FirebaseAuth
@@ -33,6 +35,8 @@ class AuthActivity : AppCompatActivity() {
 
         phoneId = findViewById(R.id.editTextPhone)
         btnauth = findViewById(R.id.buttonAuth)
+        btncode = findViewById(R.id.buttonCode)
+        codeId  = findViewById(R.id.editTextCode)
 
 
         mFirebaseAuth =FirebaseAuth.getInstance()
@@ -93,6 +97,17 @@ class AuthActivity : AppCompatActivity() {
             }
 
         }
+        btncode.setOnClickListener {
+            var code :String = codeId.text.toString()
+            if (code.isEmpty()){
+                codeId.setError("Code is empty")
+            }
+            else{
+                Toast.makeText(this@AuthActivity,"Verifying with code",Toast.LENGTH_SHORT).show()
+                verifyWithCode(mVerificationId,code)
+            }
+        }
+
 
     }
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential){
@@ -112,6 +127,10 @@ class AuthActivity : AppCompatActivity() {
                         }
                     }
                 }
+    }
+    private fun verifyWithCode(verificationId :String, code :String){
+        val credential = PhoneAuthProvider.getCredential(verificationId!!, code)
+        signInWithPhoneAuthCredential(credential)
     }
 
     override fun onStart() {
