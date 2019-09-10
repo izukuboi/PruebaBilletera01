@@ -25,13 +25,15 @@ class Home_Activity : AppCompatActivity() {
     private lateinit var context: Context
 
     lateinit var img: ImageView
+
+    val str_qr = HashMap<String, Any>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home_)
 
         context = this
 
-        val str_qr = HashMap<String, Any>()
+
 
         str_qr.put("Nombre", "Angel Manuel")
         str_qr.put("Apellido", "Wayar Encinas")
@@ -42,17 +44,16 @@ class Home_Activity : AppCompatActivity() {
         img = findViewById(R.id.iv_qr_code)
 
 
-        generateQRCode(str_qr.toString())
 
-//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            if (checkPermission(context, permissions)) {
-//                generateQRCode(str_qr.toString())
-//            } else {
-//                requestPermissions(permissions, PERMISSION_REQUEST)
-//            }
-//        }else{
-//            generateQRCode(str_qr.toString())
-//        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (checkPermission(context, permissions)) {
+                generateQRCode(str_qr.toString())
+            } else {
+                requestPermissions(permissions, PERMISSION_REQUEST)
+            }
+        }else{
+            generateQRCode(str_qr.toString())
+        }
 
 
 
@@ -125,7 +126,7 @@ class Home_Activity : AppCompatActivity() {
                 }
             }
             if(allSuccess)
-                generateQRCode("Esto es una prueba :v")
+                generateQRCode(str_qr.toString())
         }
     }
 
