@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
             val intent: Intent = Intent(this, Home_Activity::class.java)
             startActivity(intent)
         }
-        button2.setOnClickListener{
+        button3.setOnClickListener{
             val intent :Intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
         }
