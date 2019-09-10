@@ -1,5 +1,6 @@
 package com.axon.pruebabilletera
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,10 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.FirebaseException
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
-import com.google.firebase.auth.PhoneAuthCredential
-import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.auth.*
 import kotlinx.android.synthetic.main.activity_auth.*
 import java.util.concurrent.TimeUnit
 
@@ -116,8 +114,17 @@ class AuthActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        mAuthStateListener = FirebaseAuth.AuthStateListener {
-
+        mAuthStateListener = FirebaseAuth.AuthStateListener {auth ->
+            val user = auth.currentUser
+            if(user != null){
+                Toast.makeText(this@AuthActivity,"Logged in",Toast.LENGTH_SHORT).show()
+                val i = Intent(this@AuthActivity,Home_Activity::class.java)
+                startActivity(i)
+            }
+            else{
+                Toast.makeText(this@AuthActivity,"nani",Toast.LENGTH_SHORT).show()
+            }
         }
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener)
     }
 }
