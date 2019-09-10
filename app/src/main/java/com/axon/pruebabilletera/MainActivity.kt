@@ -2,6 +2,7 @@ package com.axon.pruebabilletera
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,5 +17,10 @@ class MainActivity : AppCompatActivity() {
             val intent: Intent = Intent(this, Home_Activity::class.java)
             startActivity(intent)
         }
+        button2.setOnClickListener{
+            val intent :Intent = Intent(this, AuthActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
