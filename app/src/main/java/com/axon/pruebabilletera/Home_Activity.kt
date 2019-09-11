@@ -11,6 +11,7 @@ import android.util.Log
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.MultiFormatWriter
 import com.google.zxing.common.BitMatrix
@@ -21,6 +22,7 @@ import java.io.FileOutputStream
 private const val PERMISSION_REQUEST = 10
 
 class Home_Activity : AppCompatActivity() {
+    private var user = FirebaseAuth.getInstance().currentUser
     private var permissions = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
     private lateinit var context: Context
 
@@ -34,11 +36,19 @@ class Home_Activity : AppCompatActivity() {
         context = this
 
 
+        if(user != null)
+        {
+            Toast.makeText(this, "User es distinto de null", Toast.LENGTH_SHORT).show()
+        }
+        else
+        {
+            Toast.makeText(this, "User NO es distinto de null", Toast.LENGTH_SHORT).show()
+        }
 
-        str_qr.put("Nombre", "Angel Manuel")
-        str_qr.put("Apellido", "Wayar Encinas")
-        str_qr.put("Telefono", "3498533")
-        str_qr.put("Correo", "angelmanuelwayar@gmail.com")
+        str_qr.put("Nombre", user!!.displayName.toString())
+        str_qr.put("Correo", user!!.email.toString())
+        str_qr.put("Telefono", user!!.phoneNumber.toString())
+
 
         Log.i("datos", str_qr.toString())
         img = findViewById(R.id.iv_qr_code)
