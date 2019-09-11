@@ -31,7 +31,7 @@ class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_auth)
-        Log.d(TAG,intent.getStringExtra("prueba"))
+        //Log.d(TAG,intent.getStringExtra("prueba"))
 
         phoneId = findViewById(R.id.editTextPhone)
         btnauth = findViewById(R.id.buttonAuth)
